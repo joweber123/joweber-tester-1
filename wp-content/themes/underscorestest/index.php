@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+		<div>This is a test on master</div>
 		<?php
 		if ( have_posts() ) :
 
