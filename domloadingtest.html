@@ -27,6 +27,7 @@
         getWindowLocation()
         function changeURL(){
             console.log('changed URL');
+            console.log(windowLocation);
             history.pushState({
             id: 'homepage'
         }, 'Home | My App', `${windowLocation}/testing`);
