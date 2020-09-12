@@ -21,9 +21,10 @@
         windowLocation = "";
         function getWindowLocation() {
             const  windowLocation = window.location.href
-
+            console.log(windowLocation);
             return  windowLocation;
         }
+        getWindowLocation()
         function changeURL(){
             console.log('changed URL');
             history.pushState({
