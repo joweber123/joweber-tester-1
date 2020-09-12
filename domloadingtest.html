@@ -16,13 +16,19 @@
 
         function pageFullyLoaded(e) {
             console.log('page fully loaded');
+            getWindowLocation()
         }
-        
+        windowLocation = "";
+        function getWindowLocation() {
+            const  windowLocation = window.location.href
+
+            return  windowLocation;
+        }
         function changeURL(){
             console.log('changed URL');
             history.pushState({
             id: 'homepage'
-        }, 'Home | My App', `${window.location.href}/testing`);
+        }, 'Home | My App', `${windowLocation}/testing`);
 
         }
 
