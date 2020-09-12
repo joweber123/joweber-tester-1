@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+        window.addEventListener("load", pageFullyLoaded, false);
+
+        function theDomHasLoaded(e) {
+            console.log('dom fully loaded');
+        }
+
+        function pageFullyLoaded(e) {
+            console.log('page fully loaded');
+        }
+        
+        function changeURL(){
+            console.log('changed URL');
+            history.pushState({
+            id: 'homepage'
+        }, 'Home | My App', '/testing');
+
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #e1eec3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .button{
+            margin: 20px 0;
+            padding: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="changeURL()">URL 1</button>
+    <button class="button">URL 2</button>
+    <button class="button">URL 3</button>
+</body>
+</html>
