@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 3');
+        console.log('dom fully loaded 2');
     }
 
     function pageFullyLoaded(e) {
@@ -96,13 +96,18 @@
         const path = window.location.pathname.split('/');
         if(urlArray.includes(path[path.length-1])){
             console.log('value already exists');
+            console.log(urlArray);
+            backgroundColorChanger(path, urlArray);
         }else{
             console.log('new value!');
             console.log(urlArray);
             urlArray.push(path[path.length-1]);
             console.log(urlArray);
+            backgroundColorChanger(path, urlArray);
         }
-
+    }
+    function backgroundColorChanger(path, urlArray){
+        console.log(urlArray.indexOf(path[path.length-1]));
     }
 
 </script>
