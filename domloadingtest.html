@@ -15,10 +15,10 @@
         }
 
         function pageFullyLoaded(e) {
-            console.log('page fully loaded');
+            console.log('page fully loaded 1');
             getWindowLocation()
         }
-        const windowLocation;
+        let windowLocation = null;
         function getWindowLocation() {
             windowLocation = window.location.href
             console.log(windowLocation);
