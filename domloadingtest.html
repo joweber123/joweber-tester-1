@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
 
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 3');
+        console.log('dom fully loaded 4');
     }
 
     function pageFullyLoaded(e) {
@@ -82,7 +82,7 @@
             console.log(typeof(newURL));
             history.pushState({
                 id: 'homepage'
-            }, 'Home | My App', `${windowLocation}`/`${newURL}`);
+            }, 'Home | My App', `${windowLocation}/${newURL}`);
         })
     }
     buttonArrayEvent();
