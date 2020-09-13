@@ -4,40 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Switch Test</title>
-    <script>
 
-
-        document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
-        window.addEventListener("load", pageFullyLoaded, false);
-
-        function theDomHasLoaded(e) {
-            console.log('dom fully loaded');
-        }
-
-        function pageFullyLoaded(e) {
-            console.log('page fully loaded 1');
-            getWindowLocation()
-        }
-        let windowLocation = null;
-        function getWindowLocation() {
-            windowLocation = window.location.href
-            console.log(windowLocation);
-            return  windowLocation;
-        }
-        getWindowLocation()
-        function changeURL(){
-            console.log('changed URL');
-            console.log(windowLocation);
-            history.pushState({
-            id: 'homepage'
-        }, 'Home | My App', `${windowLocation}/testing`);
-
-        }
-
-        const buttons = document.querySelectorAll
-    </script>
     <style>
         body{
+            margin: 0;
+            padding: 0;
+        }
+        #button-container{
             display: flex;
             width: 100vw;
             height: 100vh;
@@ -55,8 +28,63 @@
     </style>
 </head>
 <body>
-    <button class="button" onclick="changeURL()">URL 1</button>
-    <button class="button">URL 2</button>
-    <button class="button">URL 3</button>
+    <div id="button-container">
+        <button class="button" data-url = "1" >URL 1</button>
+        <button class="button" data-url = "2" >URL 2</button>
+        <button class="button" data-url = "3" >URL 3</button>
+    </div>
 </body>
+<script>
+
+
+    document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+    window.addEventListener("load", pageFullyLoaded, false);
+
+    function theDomHasLoaded(e) {
+        console.log('dom fully loaded 2');
+    }
+
+    function pageFullyLoaded(e) {
+        console.log('page fully loaded');
+        getWindowLocation()
+    }
+
+
+
+    let windowLocation = null;
+    function getWindowLocation() {
+        windowLocation = window.location.href
+        console.log(windowLocation);
+        return  windowLocation;
+    }
+    getWindowLocation()
+    function changeURL(){
+        console.log('changed URL');
+        console.log(windowLocation);
+        history.pushState({
+        id: 'homepage'
+    }, 'Home | My App', `${windowLocation}/testing`);
+
+    }
+
+
+    function buttonArrayEvent(){
+        const buttonContainer = document.querySelector('#button-container');
+        buttonContainer.addEventListener('click', function(event){
+            console.log(event.target.dataset.url);
+            let newURL = event.target.dataset.url;
+            if (newURL === "1" || newURL === "2"){
+                newURL = event.target.dataset.url;
+            }else{
+                newURL = Math.floor((Math.random() * 100) + 1);
+            }
+            console.log(newURL);
+            history.pushState({
+                id: 'homepage'
+            }, 'Home | My App', `${windowLocation}`/`${newURL}`);
+        })
+    }
+    buttonArrayEvent();
+
+</script>
 </html>
