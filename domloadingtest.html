@@ -39,9 +39,9 @@
 
     document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
     window.addEventListener("load", pageFullyLoaded, false);
-
+    
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 4');
+        console.log('dom fully loaded 2');
     }
 
     function pageFullyLoaded(e) {
@@ -49,24 +49,22 @@
         getWindowLocation()
     }
 
-
-
     let windowLocation = null;
+    
     function getWindowLocation() {
         windowLocation = window.location.href
         console.log(windowLocation);
         return  windowLocation;
     }
     getWindowLocation()
+
     function changeURL(){
         console.log('changed URL');
         console.log(windowLocation);
         history.pushState({
-        id: 'homepage'
-    }, 'Home | My App', `${windowLocation}/testing`);
-
+            id: 'homepage'
+        }, 'Home | My App', `${windowLocation}/testing`);
     }
-
 
     function buttonArrayEvent(){
         const buttonContainer = document.querySelector('#button-container');
@@ -78,7 +76,6 @@
             }else{
                 newURL = Math.floor((Math.random() * 100) + 1);
             }
-            console.log(newURL);
             console.log(typeof(newURL));
             history.pushState({
                 id: 'homepage'
@@ -86,6 +83,19 @@
         })
     }
     buttonArrayEvent();
+
+   
+    const pushState = history.pushState;
+    history.pushState = function () {
+        pushState.apply(history, arguments);
+        urlArrayPusher();
+    };
+
+    const urlArray = [];
+    function urlArrayPush(){
+        const path = window.location.pathname.split('/');
+        urlArray.push(path[path.length-1]);
+    }
 
 </script>
 </html>
