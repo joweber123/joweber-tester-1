@@ -108,6 +108,10 @@
     }
     function backgroundColorChanger(path, urlArray){
         console.log(urlArray.indexOf(path[path.length-1]));
+        const buttonContainer = document.querySelector('#button-container');
+        if(urlArray.indexOf(path[path.length-1])==1){
+            buttonContainer.backgroundColor = "Blue";
+        }
     }
 
 </script>
