@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 5');
+        console.log('dom fully loaded 2');
     }
 
     function pageFullyLoaded(e) {
@@ -116,7 +116,7 @@
         if((arrayLocation == 0) ||(arrayLocation % 3)==0){
             buttonContainer.style.background = color1;
             console.log('color-1')
-        }else if((arrayLocation % 2)==0){
+        }else if((arrayLocation == 1)||(arrayLocation % 2)==0){
             buttonContainer.style.background = color2;
             console.log('color-2')
         }else{
