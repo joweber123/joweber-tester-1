@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 3');
+        console.log('dom fully loaded 10');
     }
 
     function pageFullyLoaded(e) {
@@ -92,9 +92,17 @@
     };
 
     const urlArray = [];
-    function urlArrayPusher(){
+    function urlArrayPush(){
         const path = window.location.pathname.split('/');
-        urlArray.push(path[path.length-1]);
+        if(urlArray.includes(path)){
+            console.log('value already exists');
+        }else{
+            console.log('new value!');
+            console.log(urlArray);
+            urlArray.push(path[path.length-1]);
+            console.log(urlArray);
+        }
+
     }
 
 </script>
