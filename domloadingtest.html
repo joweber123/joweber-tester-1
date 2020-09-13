@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 2');
+        console.log('dom fully loaded 4');
     }
 
     function pageFullyLoaded(e) {
@@ -110,10 +110,9 @@
     const color2 = "linear-gradient(to right, #06beb6, #48b1bf)"
     const color3 = "linear-gradient(to right, #1c92d2, #f2fcfe)"
     function backgroundColorChanger(path, urlArray){
-        console.log(urlArray.indexOf(path[path.length-1]));
-        console.log(typeof(urlArray.indexOf(path[path.length-1])));
         const buttonContainer = document.querySelector('#button-container');
-        const arrayLocation = urlArray.indexOf(path[path.length-1]);
+        const arrayLocation = (urlArray.indexOf(path[path.length-1]))+1;
+        console.log(arrayLocation);
         if(arrayLocation == 0){
             buttonContainer.style.background = color1;
         }else if(arrayLocation==1){
