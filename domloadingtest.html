@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
 
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 2');
+        console.log('dom fully loaded 3');
     }
 
     function pageFullyLoaded(e) {
@@ -79,6 +79,7 @@
                 newURL = Math.floor((Math.random() * 100) + 1);
             }
             console.log(newURL);
+            console.log(typeof(newURL));
             history.pushState({
                 id: 'homepage'
             }, 'Home | My App', `${windowLocation}`/`${newURL}`);
