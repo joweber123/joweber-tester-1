@@ -35,15 +35,15 @@
     </div>
 </body>
 <script>
-    const color1 = "linear-gradient(to right, #d9a7c7, #fffcdc)"
-    const color2 = "linear-gradient(to right, #06beb6, #48b1bf)"
-    const color3 = "linear-gradient(to right, #1c92d2, #f2fcfe)"
+    const color1 = "linear-gradient(to right, #d9a7c7, #fffcdc)";
+    const color2 = "linear-gradient(to right, #06beb6, #48b1bf)";
+    const color3 = "linear-gradient(to right, #1c92d2, #f2fcfe)";
 
     document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 2');
+        console.log('dom fully loaded 5');
     }
 
     function pageFullyLoaded(e) {
@@ -58,7 +58,7 @@
         console.log(windowLocation);
         return  windowLocation;
     }
-    getWindowLocation()
+    getWindowLocation();
 
     function changeURL(){
         console.log('changed URL');
@@ -116,21 +116,21 @@
         }
     }
 
-    function backgroundColorChanger(path, urlArray){
-        const buttonContainer = document.querySelector('#button-container');
-        const arrayLocation = (urlArray.indexOf(path[path.length-1]));
-        console.log(arrayLocation);
-        if((arrayLocation == 0) ||(arrayLocation % 3)==0){
-            buttonContainer.style.background = color1;
-            console.log('color-1')
-        }else if((arrayLocation == 1)||(arrayLocation % 2)==0){
-            buttonContainer.style.background = color2;
-            console.log('color-2')
-        }else{
-            buttonContainer.style.background = color3;
-            console.log('color-3')
-    }
-}
+    // function backgroundColorChanger(path, urlArray){
+    //     const buttonContainer = document.querySelector('#button-container');
+    //     const arrayLocation = (urlArray.indexOf(path[path.length-1]));
+    //     console.log(arrayLocation);
+    //     if((arrayLocation == 0) ||(arrayLocation % 3)==0){
+    //         buttonContainer.style.background = color1;
+    //         console.log('color-1')
+    //     }else if((arrayLocation == 1)||(arrayLocation % 2)==0){
+    //         buttonContainer.style.background = color2;
+    //         console.log('color-2')
+    //     }else{
+    //         buttonContainer.style.background = color3;
+    //         console.log('color-3')
+    //     }
+    // }
 
 </script>
 </html>
