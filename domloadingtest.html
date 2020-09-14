@@ -35,13 +35,15 @@
     </div>
 </body>
 <script>
-
+    const color1 = "linear-gradient(to right, #d9a7c7, #fffcdc)"
+    const color2 = "linear-gradient(to right, #06beb6, #48b1bf)"
+    const color3 = "linear-gradient(to right, #1c92d2, #f2fcfe)"
 
     document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 3');
+        console.log('dom fully loaded 2');
     }
 
     function pageFullyLoaded(e) {
@@ -92,29 +94,28 @@
     };
 
     const urlArray = [];
-    let i = 0;
+    let i = 1;
     function urlArrayPusher(){
         const path = window.location.pathname.split('/');
-        if(urlArray.includes(path[path.length-1])){
+        const finalElementofURL = path[path.length-1]);
+        if(urlArray.includes(finalElementofURL)){
             console.log('value already exists');
             console.log(urlArray);
             backgroundColorChanger(path, urlArray);
         }else{
             console.log(`i beginning value ${i}`);
             console.log('new value!');
-            urlArray.push(path[path.length-1]);
+            urlArray.push(`{chatID: ${finalElementofURL}, color: ${i}}`);
             backgroundColorChanger(path, urlArray);
-            if(i<4){
+            if(i<3){
                 i++
             }else{
-                i=0
+                i=1
             }
             console.log(`i new value ${i}`);
         }
     }
-    const color1 = "linear-gradient(to right, #d9a7c7, #fffcdc)"
-    const color2 = "linear-gradient(to right, #06beb6, #48b1bf)"
-    const color3 = "linear-gradient(to right, #1c92d2, #f2fcfe)"
+
     function backgroundColorChanger(path, urlArray){
         const buttonContainer = document.querySelector('#button-container');
         const arrayLocation = (urlArray.indexOf(path[path.length-1]));
