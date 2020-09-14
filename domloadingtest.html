@@ -41,7 +41,7 @@
     window.addEventListener("load", pageFullyLoaded, false);
     
     function theDomHasLoaded(e) {
-        console.log('dom fully loaded 2');
+        console.log('dom fully loaded 3');
     }
 
     function pageFullyLoaded(e) {
@@ -92,6 +92,7 @@
     };
 
     const urlArray = [];
+    let i = 0;
     function urlArrayPusher(){
         const path = window.location.pathname.split('/');
         if(urlArray.includes(path[path.length-1])){
@@ -99,11 +100,16 @@
             console.log(urlArray);
             backgroundColorChanger(path, urlArray);
         }else{
+            console.log(`i beginning value ${i}`);
             console.log('new value!');
-            console.log(urlArray);
             urlArray.push(path[path.length-1]);
-            console.log(urlArray);
             backgroundColorChanger(path, urlArray);
+            if(i<4){
+                i++
+            }else{
+                i=0
+            }
+            console.log(`i new value ${i}`);
         }
     }
     const color1 = "linear-gradient(to right, #d9a7c7, #fffcdc)"
