@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 5</title>
+    <title>URL Switch Test 6</title>
 
     <style>
         body{
@@ -89,28 +89,34 @@
     const pushState = history.pushState;
     history.pushState = function () {
         pushState.apply(history, arguments);
-        urlArrayPusher();
+        urlArrayTester();
     };
-
-    const urlArray = [];
     let i = 0;
-    function urlArrayPusher(){
+    function urlArrayPusher(iterator){
+        console.log(`old value of i is ${i}`)
+            if(iterator<2){
+                iterator++
+            }else{
+                iterator=0
+            }
+            console.log(`old value of i is ${iterator}`)
+            return iterator;
+    }
+    const urlArray = [];
+
+    function urlArrayTester(){
         const path = window.location.pathname.split('/');
-        if(urlArray.includes(path[path.length-1])){
+        const urlEnding = path[path.length-1];
+        if(urlArray.includes()){
             console.log('value already exists');
             console.log(urlArray);
             backgroundColorChanger(path, urlArray);
         }else{
             console.log('new value');
-            urlArray.push(path[path.length-1]);
+            urlArray.push(urlEnding);
+            urlArrayPusher(i);
             backgroundColorChanger(path, urlArray);
-            console.log(`old value of i is ${i}`)
-            if(i<2){
-                i++
-            }else{
-                i=0
-            }
-            console.log(`old value of i is ${i}`)
+
         }
     }
 
