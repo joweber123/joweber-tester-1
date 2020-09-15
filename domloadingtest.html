@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 7</title>
+    <title>URL Switch Test 8</title>
 
     <style>
         body{
@@ -106,7 +106,7 @@
     function urlArrayTester(){
         const path = window.location.pathname.split('/');
         const urlEnding = path[path.length-1];
-        if(urlArray.includes()){
+        if(urlArray.includes(urlEnding)){
             console.log('value already exists');
             console.log(urlArray);
             backgroundColorChanger(path, urlArray);
