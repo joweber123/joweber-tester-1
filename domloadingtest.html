@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 3</title>
+    <title>URL Switch Test 4</title>
 
     <style>
         body{
@@ -107,20 +107,18 @@
             
             urlArray.push(urlEnding);
             console.log(urlArray);
-            urlArrayPusher(i);
-            backgroundColorChanger(path, urlArray);
-
-        }
-    }
-    function urlArrayPusher(i){
-        console.log(`old value of i is ${i}`)
+            console.log(`old value of i is ${i}`)
             if(i<2){
                 i++
             }else{
                 i=0
             }
             console.log(`old value of i is ${i}`)
+            backgroundColorChanger(path, urlArray);
+
+        }
     }
+
     function backgroundColorChanger(path, urlArray){
         const buttonContainer = document.querySelector('#button-container');
         const arrayLocation = (urlArray.indexOf(path[path.length-1]));
