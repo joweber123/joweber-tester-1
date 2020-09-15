@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 3</title>
+    <title>URL Switch Test 10</title>
 
     <style>
         body{
@@ -92,15 +92,7 @@
         urlArrayTester();
     };
   
-    function urlArrayPusher(iterator){
-        console.log(`old value of i is ${iterator}`)
-            if(iterator<2){
-                iterator++
-            }else{
-                iterator=0
-            }
-            console.log(`old value of i is ${iterator}`)
-    }
+
     const urlArray = [];
     let i = 0;
     function urlArrayTester(){
@@ -120,7 +112,15 @@
 
         }
     }
-
+    function urlArrayPusher(iterator){
+        console.log(`old value of i is ${iterator}`)
+            if(iterator<2){
+                iterator++
+            }else{
+                iterator=0
+            }
+            console.log(`old value of i is ${iterator}`)
+    }
     function backgroundColorChanger(path, urlArray){
         const buttonContainer = document.querySelector('#button-container');
         const arrayLocation = (urlArray.indexOf(path[path.length-1]));
