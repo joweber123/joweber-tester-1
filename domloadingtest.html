@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 7</title>
+    <title>URL Switch Test 8</title>
 
     <style>
         body{
@@ -105,7 +105,7 @@
         }else{
             console.log('new value');
             urlPusher(i, urlEnding)
-            urlArray.push(urlEnding);
+            // urlArray.push(urlEnding);
             console.log(urlArray);
             console.log(`old value of i is ${i}`)
             i<2 ? i++ : i=0;
@@ -114,7 +114,7 @@
         }
     }
     function urlPusher(i, urlEnding){
-        urlArray.push(`{url:"${urlEnding}", color:"${i}"}`)
+        urlArray.push(`{url:${urlEnding}, color:${i}}`)
     }
 
     function backgroundColorChanger(path, urlArray){
