@@ -1,10 +1,10 @@
-<!-- https://github.com/joweber123/joweber-tester-1/blob/master/domloadingtest.html -->
+]<!-- https://github.com/joweber123/joweber-tester-1/blob/master/domloadingtest.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 8</title>
+    <title>URL Switch Test 9</title>
 
     <style>
         body{
@@ -93,7 +93,7 @@
     };
     let i = 0;
     function urlArrayPusher(iterator){
-        console.log(`old value of i is ${i}`)
+        console.log(`old value of i is ${iterator}`)
             if(iterator<2){
                 iterator++
             }else{
@@ -112,7 +112,9 @@
             backgroundColorChanger(path, urlArray);
         }else{
             console.log('new value');
+            console.log(urlArray);
             urlArray.push(urlEnding);
+            
             urlArrayPusher(i);
             backgroundColorChanger(path, urlArray);
 
