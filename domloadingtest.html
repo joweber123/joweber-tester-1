@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 3</title>
+    <title>URL Switch Test 4</title>
 
     <style>
         body{
@@ -124,6 +124,7 @@
     }
 
     function backgroundColorChanger(path){
+        console.log(path);
         const buttonContainer = document.querySelector('#button-container');
         const arrayElement = urlArray.find( ({ url }) => url === path );
         console.log(arrayElement)
