@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 4</title>
+    <title>URL Switch Test 5</title>
 
     <style>
         body{
@@ -72,7 +72,6 @@
     function buttonArrayEvent(){
         const buttonContainer = document.querySelector('#button-container');
         buttonContainer.addEventListener('click', function(event){
-            console.log(event.target.dataset.url);
             let newURL = event.target.dataset.url;
             if (newURL === "1" || newURL === "2"){
                 newURL = event.target.dataset.url;
@@ -105,11 +104,13 @@
             console.log('new value');
             urlArray.push(path[path.length-1]);
             backgroundColorChanger(path, urlArray);
+            console.log(`old value of i is ${i}`)
             if(i<2){
                 i++
             }else{
                 i=0
             }
+            console.log(`old value of i is ${i}`)
         }
     }
 
