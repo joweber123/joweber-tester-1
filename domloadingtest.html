@@ -1,11 +1,10 @@
 <!-- https://github.com/joweber123/joweber-tester-1/blob/master/domloadingtest.html -->
-<!-- test 2 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 2</title>
+    <title>URL Switch Test 3</title>
 
     <style>
         body{
@@ -102,8 +101,6 @@
             console.log(urlArray);
             backgroundColorChanger(path, urlArray);
         }else{
-            console.log(`i beginning value ${i}`);
-            console.log('new value!');
             urlArray.push(path[path.length-1]);
             backgroundColorChanger(path, urlArray);
             if(i<2){
@@ -120,6 +117,7 @@
     function backgroundColorChanger(path, urlArray){
         const buttonContainer = document.querySelector('#button-container');
         const arrayLocation = (urlArray.indexOf(path[path.length-1]));
+        console.log(urlArray);
         console.log(arrayLocation);
         if(arrayLocation == 1){
             buttonContainer.style.background = color1;
