@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 11</title>
+    <title>URL Switch Test 12</title>
 
     <style>
         body{
@@ -101,7 +101,6 @@
         if(urlArray.includes(urlEnding)){
             console.log('value already exists');
             console.log(urlArray);
-            backgroundColorChanger(path, urlArray);
         }else{
             console.log('new value');
             urlPusher(i, urlEnding)
@@ -110,8 +109,8 @@
             console.log(`old value of i is ${i}`)
             i<2 ? i++ : i=0;
             console.log(`new value of i is ${i}`)
-            backgroundColorChanger(path, urlArray);
         }
+        backgroundColorChanger(path, urlArray);
     }
     function urlPusher(i, urlEnding){
         if(i == 0){
