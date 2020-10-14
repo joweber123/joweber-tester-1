@@ -1,10 +1,9 @@
-<!-- https://github.com/joweber123/joweber-tester-1/blob/master/domloadingtest.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 9</title>
+    <title>URL Switch Test 10</title>
 
     <style>
         body{
@@ -82,9 +81,10 @@
     }
     
     const header = document.querySelector("#header");
+
     function addHeader(){
         const header = document.querySelector("#header");
-        header.innerHTML(`<div class="chat-toolbar"><ul class="chat-toolbar__menu"><li class="chat-toolbar__menu-item is-selected"><svg class="gridicon gridicons-chat" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 4h-8c-1.1 0-2 .9-2 2v2h2c1.7 0 3 1.3 3 3v2h2v3.5l3.3-2.3c1.1-.8 1.7-2 1.7-3.3V6c0-1.1-.9-2-2-2z"></path><path d="M14 11v5c0 1.1-.9 2-2 2H7v3.5l-3.3-2.3c-1.1-.8-1.7-2-1.7-3.3V11c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2z"></path></g></svg><!-- react-text: 209 -->All<!-- /react-text --></li><li class="chat-toolbar__menu-item"><svg class="gridicon gridicons-aside" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M14 20l6-6V6c0-1.105-.895-2-2-2H6c-1.105 0-2 .895-2 2v12c0 1.105.895 2 2 2h8zM6 6h12v6h-4c-1.105 0-2 .895-2 2v4H6V6zm10 4H8V8h8v2z"></path></g></svg><!-- react-text: 214 -->Notes<!-- /react-text --></li><li class="chat-toolbar__menu-item"><svg class="gridicon gridicons-star-outline needs-offset" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 6.308l1.176 3.167.347.936.997.042 3.374.14-2.647 2.09-.784.62.27.963.91 3.25-2.813-1.872-.83-.553-.83.552-2.814 1.87.91-3.248.27-.962-.783-.62-2.648-2.092 3.374-.14.996-.04.347-.936L12 6.308M12 2L9.418 8.953 2 9.257l5.822 4.602L5.82 21 12 16.89 18.18 21l-2.002-7.14L22 9.256l-7.418-.305L12 2z"></path></g></svg></li></ul></div>`);
+        header.innerHTML = `<div class="chat-toolbar"><ul class="chat-toolbar__menu"><li class="chat-toolbar__menu-item is-selected"><svg class="gridicon gridicons-chat" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 4h-8c-1.1 0-2 .9-2 2v2h2c1.7 0 3 1.3 3 3v2h2v3.5l3.3-2.3c1.1-.8 1.7-2 1.7-3.3V6c0-1.1-.9-2-2-2z"></path><path d="M14 11v5c0 1.1-.9 2-2 2H7v3.5l-3.3-2.3c-1.1-.8-1.7-2-1.7-3.3V11c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2z"></path></g></svg><!-- react-text: 209 -->All<!-- /react-text --></li><li class="chat-toolbar__menu-item"><svg class="gridicon gridicons-aside" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M14 20l6-6V6c0-1.105-.895-2-2-2H6c-1.105 0-2 .895-2 2v12c0 1.105.895 2 2 2h8zM6 6h12v6h-4c-1.105 0-2 .895-2 2v4H6V6zm10 4H8V8h8v2z"></path></g></svg><!-- react-text: 214 -->Notes<!-- /react-text --></li><li class="chat-toolbar__menu-item"><svg class="gridicon gridicons-star-outline needs-offset" height="18" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 6.308l1.176 3.167.347.936.997.042 3.374.14-2.647 2.09-.784.62.27.963.91 3.25-2.813-1.872-.83-.553-.83.552-2.814 1.87.91-3.248.27-.962-.783-.62-2.648-2.092 3.374-.14.996-.04.347-.936L12 6.308M12 2L9.418 8.953 2 9.257l5.822 4.602L5.82 21 12 16.89 18.18 21l-2.002-7.14L22 9.256l-7.418-.305L12 2z"></path></g></svg></li></ul></div>`;
     }
     function buttonArrayEvent(){
         const buttonContainer = document.querySelector('#button-container');
