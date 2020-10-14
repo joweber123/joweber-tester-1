@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 5</title>
+    <title>URL Switch Test 6</title>
 
     <style>
         body{
@@ -70,6 +70,16 @@
         }, 'Home | My App', `${windowLocation}/testing`);
     }
 
+    function addClass(){
+        const buttonContainer = document.querySelector("#button-container");
+        buttonContainer.classList.add("chat__current-chat");
+    }
+    
+     function removeClass(){
+        const buttonContainer = document.querySelector("#button-container");
+        buttonContainer.classList.remove("chat__current-chat");
+    }
+    
     function buttonArrayEvent(){
         const buttonContainer = document.querySelector('#button-container');
         buttonContainer.addEventListener('click', function(event){
@@ -78,16 +88,19 @@
                 newURL = event.target.dataset.url;
                 history.pushState({
                 id: 'homepage'
-            }, 'Home | My App', `${windowLocation}/${newURL}`);
+            }, 'Home | My App', `${windowLocation}/chat/${newURL}`);
+                addClass;
             }else if(newURL === "3"){
                 newURL = Math.floor((Math.random() * 100) + 1);
                 history.pushState({
                 id: 'homepage'
-            }, 'Home | My App', `${windowLocation}/${newURL}`);
+            }, 'Home | My App', `${windowLocation}/chat/${newURL}`);
+                 addClass;
             }else{
                history.pushState({
                 id: 'homepage'
             }, 'Home | My App', `${windowLocation}`);
+                removeClass;
             }
         })
     }
