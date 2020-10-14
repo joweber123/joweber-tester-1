@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Switch Test 3</title>
+    <title>URL Switch Test 4</title>
 
     <style>
         body{
@@ -33,6 +33,7 @@
         <button class="button" data-url = "1" >URL 1</button>
         <button class="button" data-url = "2" >URL 2</button>
         <button class="button" data-url = "3" >URL 3</button>
+        <button class="button" data-url = "#" >Home</button>
     </div>
 </body>
 <script>
@@ -75,8 +76,18 @@
             let newURL = event.target.dataset.url;
             if (newURL === "1" || newURL === "2"){
                 newURL = event.target.dataset.url;
-            }else{
+                history.pushState({
+                id: 'homepage'
+            }, 'Home | My App', `${windowLocation}/${newURL}`);
+            }else if(newURL === "3"){
                 newURL = Math.floor((Math.random() * 100) + 1);
+                history.pushState({
+                id: 'homepage'
+            }, 'Home | My App', `${windowLocation}/${newURL}`);
+            }else{
+               history.pushState({
+                id: 'homepage'
+            }, 'Home | My App', `${windowLocation}`);
             }
             history.pushState({
                 id: 'homepage'
